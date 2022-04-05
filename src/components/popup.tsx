@@ -55,6 +55,9 @@ const DialogCompoent = (props: IDialogProps) => {
                                 <div>
                                     <button onClick={props.handleClose} className='new-button' type="submit" disabled={props.userName?.length === 0}>
                                         Envoyer
+                                    </button>&nbsp;
+                                    <button onClick={props.handleClose} className='new-button' type="submit">
+                                        Annuler
                                     </button>
                                 </div>
                             </form>
