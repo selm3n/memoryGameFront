@@ -233,7 +233,7 @@ function App() {
           <LinearProgress variant="determinate" value={progress} />
         </div>}
 
-        {cards.length === 0 && cardImages.length > 0 ? <button onClick={shuffleCards} className='new-button'>New Game</button> : <Spinner />}
+        {(cards.length === 0 && cardImages.length > 0) ? <button onClick={shuffleCards} className='new-button'>New Game</button> : cards.length === 0 ?<Spinner /> : null}
       </div>
       <DialogCompoent open={open} handleClose={handleClose} dialogContent={didWin ? winDialogContent : loseDialogContent} didWin={didWin} userName={userName} handleSubmit={handleSubmit} handleChange={handleChange} />
 
